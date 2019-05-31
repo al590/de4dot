@@ -829,7 +829,8 @@ namespace de4dot.code.deobfuscators.Eazfuscator_NET {
 				if (stringDecrypter.HasRealMethod &&
 				    otherMethods.Count == 5 &&
 				    otherMethod50 != null &&
-				    decryptStringType.NestedTypes.Count == 3 &&
+				    (decryptStringType.NestedTypes.Count == 3 ||
+				     decryptStringType.NestedTypes.Count == 2) &&
 				    otherMethod50.IsPrivate &&
 				    otherMethod50.IsStatic &&
 				    decryptStringMethod.IsNoInlining &&

@@ -149,7 +149,8 @@ namespace de4dot.code.deobfuscators.Eazfuscator_NET {
 				return DotNetUtils.FindFieldType(type, "System.IO.BinaryReader", true) != null &&
 					DotNetUtils.FindFieldType(type, "System.Collections.Generic.Dictionary`2<System.Int32,System.String>", true) != null;
 			}
-			else if (type.NestedTypes.Count == 3) {
+			else if (type.NestedTypes.Count == 3 ||
+				     type.NestedTypes.Count == 2) {
 				streamHelperType = FindStreamHelperType(type);
 				return streamHelperType != null;
 			}
